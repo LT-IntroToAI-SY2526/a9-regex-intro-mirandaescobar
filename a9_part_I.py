@@ -9,7 +9,7 @@ import re
 # should extract a match where the first group is the month, the second group the day
 # and the third group the year
 date_string = "November 9, 1982"
-pat = re.compile("REPLACE ME", re.IGNORECASE)
+pat = re.compile("(\w+) (\d) (\d{4})", re.IGNORECASE)
 date_matches = pat.match(date_string)
 
 # problem 2
