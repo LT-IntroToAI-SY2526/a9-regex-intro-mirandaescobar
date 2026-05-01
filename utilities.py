@@ -4,7 +4,7 @@ from wikipedia import WikipediaPage
 from bs4 import BeautifulSoup
 
 from typing import List, Match
-
+import requests
 
 def get_page_html(title: str) -> str:
     """Gets html of a wikipedia page
