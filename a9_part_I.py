@@ -14,15 +14,15 @@ date_matches = pat.match(date_string)
 
 # problem 2
 # should extract a match where the first group is the number, the second the street, the
-# third the city, the fourth the state and the fifth the zip code
+# third the city
 address_string = "2501 Addison Street\nChicago, IL 60618"
-pat = re.compile("REPLACE ME", re.IGNORECASE)
-address_matches = pat.match(address_string)
+pat = re.compile("(?P<number>\d+) (?P<street>.+)\n(?P<city>[A-Za-z ]+), (?P<state>[A-Z]{2}) (?P<zip>\d{5})", re.IGNORECASE)
+address_matches = pat.match(address_string), the fourth the state and the fifth the zip code
 
 # problem 3
 # should match all hashtags
 tweet_string = "hi everyone! #cs #python #LT #champions"
-pat = re.compile("REPLACE ME", re.IGNORECASE)
+pat = re.compile("(#)", re.IGNORECASE)
 hashtag_matches = pat.findall(tweet_string)
 
 # until you uncomment any code line below you'll get an EOF linting error feel free to
